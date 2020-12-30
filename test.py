@@ -10,7 +10,7 @@ mailid="yourmailid@gmail.com"				#	<---------- Your email id
 mailpw="yourpassword"						#	<----------	Your email password
 
 # attachment section
-attachments=['document.pdf','meme.jpg'] 		#	<---------- Attachments
+attachments=['document.pdf','image.jpg'] 		#	<---------- Attachments
 df=pd.read_excel("info.xlsx")
 
 for mailids in df['Emailid'].values:
