@@ -10,14 +10,14 @@ mailid="yourmailid@gmail.com"				#	<---------- Your email id
 mailpw="yourpassword"						#	<----------	Your email password
 
 # attachment section
-attachments=['Sample.pdf','meme.jpg'] 		#	<---------- Attachments
+attachments=['document.pdf','meme.jpg'] 		#	<---------- Attachments
 df=pd.read_excel("info.xlsx")
 
 for mailids in df['Emailid'].values:
 	c=df.loc[df['Emailid']==mailids]
 	for names in c['Name'].values :
-		# email body
-		txt="Hi "+ str(names) + " This is a script to send multiple personalised emails(bulk email marketing).\nCheck out the attached file.\nSend feedback through the whats app group."			# <-------------- Message
+		# email body. Enter your message here. use "\n" for next line
+		txt="Hi "+ str(names) + " This is a script to send multiple personalised emails(bulk email marketing).\nCheck out the attached file."
 	msg=EmailMessage()
 	# email subject
 	msg['Subject']="Test for sending personalized email with attachments" 		#  <----------  Subject
